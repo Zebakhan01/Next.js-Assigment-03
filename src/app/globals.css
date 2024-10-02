@@ -2,26 +2,272 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*header*/
+.header{
+  background-color: hsl(120, 48%, 72%);
+  
+  width: 1000px;
+  height: 50px;
+  font-size:x-large;
+  color: black;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.header-button ul{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  gap: 10px;
+  
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* main css */
+
+.footer {
+  background-color: #333; /* Dark background */
+  color: #0c0b0b;            /* White text */
+  text-align: center;     /* Centered text */
+  padding: 20px;          /* Padding around the content */
+  position: relative;      /* Positioning context */
+  width: 100%;            /* Full width */
+}
+
+.main {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif; /* Sets the font family */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgb(136, 230, 136);
+  font-size: large; /* This sets the font size */
+  color: blue; /* This sets the text color */
+ /*float: left; /* This positions the element to the right */
+  margin: 10px; /* This adds margin around the element */
+}
+
+
+
+.image {
+  display: flex;
+ border: 2px #ccc solid;
+  margin: 50px;; 
+  border: 1px solid #000; /* Example border */
+  border-radius: 50px;    /* Rounded corners */
+  max-width: 800%;        /* Responsive */
+  width:50%;
+  height:auto;           /* Maintain aspect ratio */
+  padding: 4em 1em 4em 1em;
+  margin-top: 8em;
+  margin: auto;
+  position: relative;
+  background: #161616;
+  
+}
+
+
+
+
+/* Portfolio css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #0e0203;
+}
+
+.carDetails {
+  margin: 10px;
+  align-items: center;
+  font-size: x-large;
+  color:green;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.carImage {
+  max-width: 800%;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  
+}
+
+.footer {
+
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+  background-color: #333; 
+  padding: 20px;          
+  position:absolute;   
+  nav-down: auto;
+  width: 100%;
+  
+}
+/*About Css*/
+/* About component styles */
+
+.aboutSection {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carImage {
+  width: 50%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.text {
+  text-align: left;
+  color: #555;
+  font-size: 1em;
+}
+
+.text h3 {
+  font-size: 1em;
+  color: #111;
+}
+
+.text p {
+  margin: 10px 0;
+  line-height: 1;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/*Contact*/
+/* Contact page styles */
+
+.contactSection {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.formGroup input, 
+.formGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.8em;
   }
 }
+
